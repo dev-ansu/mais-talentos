@@ -1,0 +1,29 @@
+#home .header{
+    padding:30px;
+    width: 100%;
+    height: calc(100vh - 115px);
+    background:linear-gradient(to right, white 30%, rgba(0,0,0,0)),  url("../../../assets//img/empresario.webp");
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background: #000; */
+}
+.disclaimer h1{
+    font-size: 72px;
+}
+
+.btn.btn-cadastrar{
+    background-color: var(--primary-color);
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+@media (max-width:780px) {
+    .disclaimer h1{
+        font-size: 48px;
+    }
+}

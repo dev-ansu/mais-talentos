@@ -1,0 +1,11 @@
+.logo{
+    width: 250px;
+}
+#footer{
+    min-height: 300px;
+    background-color: var(--primary-color);
+    padding:30px;
+    display: flex;
+    justify-content: content;
+    flex-direction: column;
+}

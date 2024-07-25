@@ -1,0 +1,9 @@
+@import "./global.css";
+
+.primary-color{
+    color: var(--primary-color) !important;
+}
+
+.bg-primary-color{
+    background-color: var(--primary-color) !important;
+}
