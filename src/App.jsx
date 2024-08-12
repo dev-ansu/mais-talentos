@@ -1,14 +1,11 @@
-import Layout from "@/components/Layout"
-import RoutesApp from "@/RoutesApp"
 import "@/assets/css/style.css";
+import {RouterProvider} from "react-router-dom";
+import {router} from "./RoutesApp";
 
 function App() {
   
-
   return (
-    <Layout>
-      <RoutesApp />
-    </Layout>
+      <RouterProvider router={router} />
   )
 }
 

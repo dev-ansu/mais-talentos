@@ -12,7 +12,7 @@ import {z} from "zod";
 import { toast } from 'react-toastify';
 import ListSteps from "@/components/ListSteps/ListSteps"
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import {app} from "../../../services/api";
+import {db} from "../../../services/api";
 const phoneRegex = /^\(?\d{2}\)?[\s-]?(\d{4,5})[\s-]?(\d{4})$/;
 
 const schema = z.object({
@@ -40,10 +40,12 @@ const schema = z.object({
 const FormCandidato = ()=>{
 
     const [data, setData] = useState();
+    
     const methods = useForm({
     resolver: zodResolver(schema),
     });
-    const db = getFirestore(app);
+
+
     const { handleSubmit, setValue, reset,watch, trigger, formState: { errors }, clearErrors, register } = methods;
 
     const [steps, setAllStep] = useState([
