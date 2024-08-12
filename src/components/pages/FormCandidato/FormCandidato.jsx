@@ -1,5 +1,6 @@
 import { FormProvider, useForm } from "react-hook-form";
 import { useState } from "react"
+import Container from "@/components/Container";
 import PersonalInformation from "@/components/PersonalInformation"
 import AcademicInformation from "@/components/AcademicInformation"
 import ContactInformation from "@/components/ContactInformation"
@@ -126,7 +127,7 @@ const FormCandidato = ()=>{
     }
 
     return(
-          <div className="my-container">
+        <Container>
           <BreadCrumb title="Aqui você é um talento!" subTitle="Conquiste a vaga dos seus sonhos com a +Talentos." />
           <hr></hr>
           <FormProvider {...methods}>
@@ -149,7 +150,7 @@ const FormCandidato = ()=>{
               </div>
             </div>
           </FormProvider>
-        </div>
+        </Container>
     )
 }
 
