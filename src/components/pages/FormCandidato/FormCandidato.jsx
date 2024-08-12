@@ -32,7 +32,7 @@ const schema = z.object({
   telefone: z.string().regex(phoneRegex, 'O número digitado não é válido.'),
   email: z.string().email("Digite um e-mail válido"),
   escolaridade: z.string().min("1", 'Escolha uma das opções.'),
-  objetivo_profissional: z.string().min(1, "Preencha o seu objetivo profissional"),
+  objetivo_profissional: z.string().min(1, "Escolha uma das opções abaixo."),
   trabalha_atualmente: z.string().min(1, "Este campo é obrigatório").refine( data => data.toUpperCase() === 'S' || data.toUpperCase() === 'N' ? data:false),
   curso: z.string().min(1, "Digite o nome do curso")
 });
